@@ -1,0 +1,85 @@
+h2 {
+  font-family: serif;
+  position: absolute;
+  top: 100px;
+  left: 1000px;
+  font-size: 24px;
+  color: #00bfff;
+  padding: 10px;
+  margin: 10px;
+}
+
+.overall {
+  list-style: none;
+  width: 100%;
+  height: 800px;
+  background-color: #333333;
+}
+
+.top {
+  font-family: "Times New Roman";
+  width: 100%;
+  color: #00bfff;
+  font-size: 32px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.myList {
+  font-family: "Times New Roman";
+  width: 100px;
+  height: 30px;
+  color: #228b22;
+  font-size: 28px;
+  padding: 20px;
+  line-height: 2;
+}
+
+.main {
+  font-family: "Times New Roman";
+  color: #00bfff;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+}
+
+.Img {
+  position: absolute;
+  top: 200px;
+  left: 150px;
+}
+
+.mainT {
+  font-family: serif;
+  position: absolute;
+  top: 200px;
+  left: 800px;
+  font-size: 20px;
+  color: #cd853f;
+  padding: 10px;
+  margin: 10px;
+  line-height: 3;
+}
+
+.timer {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  font-size: 32px;
+  color: red;
+}
+
+.button {
+  color: #00bfff;
+  font-family: serif;
+  font-size: 32px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  content: "";
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 3px solid olive;
+  line-height: 1.5;
+}

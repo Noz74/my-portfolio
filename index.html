@@ -9,7 +9,220 @@
     <title>My Portfolio</title>
   </head>
   <body>
-    <h1>ポートフォリオサイト</h1>
-    <script src="main.js"></script>
+    <div class="overall">
+      <h2>鵜飼　望</h2>
+      <div class="top" id="title">
+        <h1>My Portfolio</h1>
+      </div>
+      <div class="main">
+        <div id="front">My Portfolio</div>
+        <div id="AllImg">
+          <img src="file:///Users/n.ukai/Desktop/ABC.png" />
+        </div>
+        <div class="Img" id="ImgA">
+          <img src="file:///Users/n.ukai/Desktop/lathe-ga886e0adc_640.jpg" />
+        </div>
+        <div class="Img" id="ImgB">
+          <img src="file:///Users/n.ukai/Desktop/%E7%AB%8B%E5%91%BD.jpg" />
+        </div>
+        <div class="Img" id="ImgC">
+          <img src="file:///Users/n.ukai/Desktop/golf-g5cf55b0df_640.jpg" />
+        </div>
+      </div>
+
+      <div class="mainT" id="aboutText">
+        <p>
+          <span style="font-weight: bold; color: moccasin">自己紹介</span
+          ><span style="color: black"> ― </span>
+          静岡県浜松市出身、7月4日生まれ
+        </p>
+        <p>
+          <span style="font-weight: bold; color: moccasin">職歴</span
+          ><span style="color: black"> ― </span>
+          中学を卒業してから大阪の町工場で働き出す
+        </p>
+        <p>
+          <span style="font-weight: bold; color: moccasin">概略</span
+          ><span style="color: black"> ― </span>
+          CAD/CAMを使って、金属加工のプログラムや製図に従事
+        </p>
+        <p>
+          <span style="font-weight: bold; color: moccasin">エピソード</span
+          ><span style="color: black"> ― </span>
+          この時期、散髪屋でうっかり坊主にされかける
+        </p>
+      </div>
+      <div class="mainT" id="univText">
+        <p>
+          <span style="font-weight: bold; color: red">大学</span
+          ><span style="color: black"> ― </span>
+          立命館大学 経営学部
+        </p>
+        <p>
+          <span style="font-weight: bold; color: red">サークル</span
+          ><span style="color: black"> ― </span>
+          癖の強い研究サークルに所属
+        </p>
+        <p>
+          <span style="font-weight: bold; color: red">エピソード</span
+          ><span style="color: black"> ― </span>
+          同回生の学生とは年齢差結構あるけど、マスクのおかげでバレへん（このまま卒業まで耐えたい、、）
+        </p>
+      </div>
+      <div class="mainT" id="hobbyText">
+        <p>
+          <span style="font-weight: bold; color: olive">趣味</span
+          ><span style="color: black"> ― </span>
+          日本酒、ゴルフ、音楽鑑賞
+        </p>
+        <p>
+          <span style="font-weight: bold; color: olive">エピソード</span
+          ><span style="color: black"> ― </span>
+          ゴルフ最近はじめたけど、打ちっぱなしでゴロばっかり打ってたら隣の人に失笑された（涙）
+        </p>
+        <p>
+          <span style="font-weight: bold; color: olive"
+            >ホールインワンチャレンジ！</span
+          ><span style="color: black"> ― </span>18秒で止めよう！
+        </p>
+        <p>
+          <span class="timer" id="timer">0:00</span><span>　　</span
+          ><span id="result">残り100ヤード</span>
+        </p>
+        <button class="button" id="swing">スイング</button>
+        <button class="button" id="reset">リセット</button>
+      </div>
+      <div class="myList">
+        <li id="ListA" style="color: moccasin">about</li>
+        <li id="ListB" style="color: red">university</li>
+        <li id="ListC" style="color: olive">hobies</li>
+      </div>
+    </div>
+
+    <script>
+      const title = document.getElementById("title");
+      const front = document.getElementById("front");
+      const ListA = document.getElementById("ListA");
+      const ListB = document.getElementById("ListB");
+      const ListC = document.getElementById("ListC");
+
+      const AllImg = document.getElementById("AllImg");
+      const ImgA = document.getElementById("ImgA");
+      const ImgB = document.getElementById("ImgB");
+      const ImgC = document.getElementById("ImgC");
+
+      const aboutT = document.getElementById("aboutText");
+      const univT = document.getElementById("univText");
+      const hobbyT = document.getElementById("hobbyText");
+
+      const timer = document.getElementById("timer");
+      const result = document.getElementById("result");
+      const swing = document.getElementById("swing");
+      const reset = document.getElementById("reset");
+      let count = 0;
+      const countUp = function () {
+        count += 1;
+        timer.textContent = count / 100;
+      };
+
+      ImgA.style.visibility = "hidden";
+      ImgB.style.visibility = "hidden";
+      ImgC.style.visibility = "hidden";
+
+      aboutT.style.visibility = "hidden";
+      univT.style.visibility = "hidden";
+      hobbyT.style.visibility = "hidden";
+
+      title.onclick = function () {
+        front.textContent = "My Portfolio";
+        front.style.color = "deepskyblue";
+        AllImg.style.visibility = "visible";
+        ImgA.style.visibility = "hidden";
+        ImgB.style.visibility = "hidden";
+        ImgC.style.visibility = "hidden";
+        aboutT.style.visibility = "hidden";
+        univT.style.visibility = "hidden";
+        hobbyT.style.visibility = "hidden";
+        timer.style.visibility = "hidden";
+      };
+
+      ListA.onclick = function () {
+        front.textContent = "about me";
+        front.style.color = "moccasin";
+        AllImg.style.visibility = "hidden";
+        ImgA.style.visibility = "visible";
+        ImgB.style.visibility = "hidden";
+        ImgC.style.visibility = "hidden";
+        aboutT.style.visibility = "visible";
+        univT.style.visibility = "hidden";
+        hobbyT.style.visibility = "hidden";
+        timer.style.visibility = "hidden";
+      };
+      ListB.onclick = function () {
+        front.textContent = "university";
+        front.style.color = "red";
+        AllImg.style.visibility = "hidden";
+        ImgA.style.visibility = "hidden";
+        ImgB.style.visibility = "visible";
+        ImgC.style.visibility = "hidden";
+        aboutT.style.visibility = "hidden";
+        univT.style.visibility = "visible";
+        hobbyT.style.visibility = "hidden";
+        timer.style.visibility = "hidden";
+      };
+      ListC.onclick = function () {
+        front.textContent = "hobbies";
+        front.style.color = "olive";
+        AllImg.style.visibility = "hidden";
+        ImgA.style.visibility = "hidden";
+        ImgB.style.visibility = "hidden";
+        ImgC.style.visibility = "visible";
+        aboutT.style.visibility = "hidden";
+        univT.style.visibility = "hidden";
+        hobbyT.style.visibility = "visible";
+        timer.style.visibility = "visible";
+      };
+
+      let id = null;
+
+      swing.onclick = function () {
+        swing.textContent = "ショット！";
+        if (id === null) {
+          id = setInterval(countUp, 10);
+          timer.style.visibility = "hidden";
+        } else {
+          timer.style.visibility = "visible";
+          swing.textContent = "スイング";
+          clearInterval(id);
+          id = null;
+          if (count < 1000) {
+            result.textContent = "OB！！！";
+          } else if (count < 1500) {
+            result.textContent = "ダブルボギー！";
+          } else if (count < 1600) {
+            result.textContent = "ボギー！";
+          } else if (count < 1700) {
+            result.textContent = "パー！";
+          } else if (count < 1750) {
+            result.textContent = "バーディ！！";
+          } else if (count < 1800) {
+            result.textContent = "イーグル！！！";
+          } else if (count < 1801) {
+            result.textContent = "ホールインワン！！！";
+          } else {
+            result.textContent = "池ポチャ。。";
+          }
+        }
+      };
+      reset.onclick = function () {
+        clearInterval(id);
+        id = null;
+        count = 0;
+        timer.style.visibility = "visible";
+        result.textContent = "残り100ヤード";
+        swing.textContent = "スイング";
+        timer.textContent = "0.00";
+      };
+    </script>
   </body>
 </html>
